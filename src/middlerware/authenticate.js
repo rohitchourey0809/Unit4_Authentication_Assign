@@ -3,7 +3,7 @@ require("dotenv").config()
 
 
 const verifyToken = (token) =>{
-    return new Promise((resove,reject) =>{
+    return new Promise((resolve,reject) =>{
        if(err)
          var decoded = jwt.verify(token,process.env.JWT_SECRET_KEY,(err,decoded) =>{
           if(err) return false;
@@ -38,7 +38,7 @@ const authenticate  = async (req,res,next) =>{
     }
     
 
-    console.log("decoded goes belo4")
+    console.log("decoded goes below4")
     console.log(decoded)
     next()
 
