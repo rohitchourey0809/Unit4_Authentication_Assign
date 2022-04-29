@@ -5,9 +5,12 @@ const Product = require('../models/product.model')
 const authenticate = require("../middlerware/authenticate")
 const router  = express.Router() 
 
-router.post("/",async function(req,res){
-    // console.log(req)
-    // req.body.user_id = req.user._id
+router.post("/",authenticate,async (req,res)=>
+// console.log(req)
+{
+    console.log(req)
+    //  req.userID = decoded.user._id;
+    req.body.user._id = req.user._id
     try{
         const product  = await Product.create(req.body)
         console.log(product)

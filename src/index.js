@@ -17,7 +17,7 @@ app.use("/products",productcontroller)
 
 app.listen(5000,async function(){
     try{
-        console.log("Server Start")
+        console.log("Server Start port 5000")
         await connect()
 
     }
